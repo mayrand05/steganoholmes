@@ -1,0 +1,29 @@
+{
+  "manifest_version": 3,
+  "name": "Swear Word Filter",
+  "version": "1.0",
+  "description": "Censors swear words on websites",
+  "permissions": ["scripting", "activeTab"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["badword.js","script.js"]
+    }
+  ],
+  "action": {
+    
+    "default_icon": {
+      "16": "tr.png",
+      "48": "tr2.png",
+      "128": "tr3.png"
+    }
+  },
+  "icons": {
+    "16": "tr.png",
+    "48": "tr2.png",
+    "128": "tr3.png"
+  }
+}
